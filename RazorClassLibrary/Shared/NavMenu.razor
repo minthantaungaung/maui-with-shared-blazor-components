@@ -1,0 +1,31 @@
+﻿@using System.Security.Claims;
+@using Microsoft.AspNetCore.Components.Authorization;
+<AuthorizeView>
+    <Authorized>
+        <MudNavMenu Bordered="true">
+            <MudCard Elevation="0" Square="true">
+                <MudCardHeader>
+                    <MudImage Src="logoWithoutSubtext.png" Alt="KBZ Bank" Fluid="true" ObjectPosition="ObjectPosition.Center" />
+                </MudCardHeader>
+            </MudCard>
+            <MudDivider />
+            <MudNavGroup Icon="@Icons.Material.Filled.Settings" Title="Setup" IconColor="Color.Dark" Expanded="false">
+                <MudNavLink Href="/institution">Institution</MudNavLink>
+                <MudNavLink Href="/lov/value">List Of Values</MudNavLink>
+            </MudNavGroup>
+            <MudNavGroup Icon="@Icons.Material.Filled.Business" IconColor="Color.Primary" Title="Common" Expanded="false">
+                <MudNavLink Href="/cupsettlement">CUP Settlement</MudNavLink>
+                <MudNavLink Href="/cupreport">CUP Report</MudNavLink>
+            </MudNavGroup>
+            <MudNavGroup Icon="@Icons.Material.Filled.CreditCard" IconColor="Color.Info" Title="Master" Expanded="false">
+                <MudNavLink Href="/mastersettlement">Master Settlement</MudNavLink>
+            </MudNavGroup>
+            @if (context.User.FindFirst("Role")!.Value == "Admin")
+            {
+                <MudNavGroup Icon="@Icons.Material.Filled.AdminPanelSettings" IconColor="Color.Tertiary" Title="Admin" Expanded="false">
+                    <MudNavLink Href="/admin/register">Register</MudNavLink>
+                </MudNavGroup>
+            }
+        </MudNavMenu>
+    </Authorized>
+</AuthorizeView>

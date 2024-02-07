@@ -1,0 +1,46 @@
+﻿@using System.Security.Claims;
+@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">Settlement Portal</MudText>
+        <MudSpacer />
+        <AuthorizeView>
+            <Authorized>
+                <MudChip Icon="@Icons.Material.Filled.Person" Color="Color.Primary">DD</MudChip>
+                <MudChip Class="text-white" Icon="@Icons.Filled.Logout" Color="Color.Primary" OnClick="OnClickLogout">Logout</MudChip>
+            </Authorized>
+        </AuthorizeView>
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+        <NavMenu/>
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="my-8">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+@code {
+    bool _drawerOpen = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+       
+    }
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    public async Task OnClickLogout()
+    {
+       
+    }
+
+}

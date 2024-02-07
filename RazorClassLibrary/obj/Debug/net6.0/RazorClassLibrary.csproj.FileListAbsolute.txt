@@ -1,0 +1,5 @@
+D:\MinThantAungAung\DemoProjects\MAUI\MauiApp1\RazorClassLibrary\obj\Debug\net6.0\RazorClassLibrary.csproj.AssemblyReference.cache
+D:\MinThantAungAung\DemoProjects\MAUI\MauiApp1\RazorClassLibrary\obj\Debug\net6.0\RazorClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\MinThantAungAung\DemoProjects\MAUI\MauiApp1\RazorClassLibrary\obj\Debug\net6.0\RazorClassLibrary.AssemblyInfoInputs.cache
+D:\MinThantAungAung\DemoProjects\MAUI\MauiApp1\RazorClassLibrary\obj\Debug\net6.0\RazorClassLibrary.AssemblyInfo.cs
+D:\MinThantAungAung\DemoProjects\MAUI\MauiApp1\RazorClassLibrary\obj\Debug\net6.0\RazorClassLibrary.csproj.CoreCompileInputs.cache
